@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube comments</title>
+    <link rel="stylesheet" href="static/css/style_comments.css">
+</head>
+<body>
+    <h1>YouTube Comments</h1>
+    
+    <div id="sentiments">
+        <p class="sentiment-line">POSITIVE COMMENTS = {{ sentiments[0] }}%</p>
+        <p class="sentiment-line">NEUTRAL COMMENTS = {{ sentiments[1] }}%</p>
+        <p class="sentiment-line">NEGATIVE COMMENTS = {{ sentiments[2] }}%</p>
+    </div>
+
+    <div>
+      <img src="data:image/png;base64,{{ img }}" alt="Unavailable">
+    </div>
+    
+
+    <table>
+        <tr>
+          <th>Comment</th>
+          <th>Reaction</th>
+        </tr>
+        {% for i in range(comments|length) %}
+          <tr>
+            <td>{{ comments[i] }}</td>
+            <td>{{ reaction[i] }}</td>
+          </tr>
+        {% endfor %}
+      </table>
+      
+      
+</body>
+</html>
