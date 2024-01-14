@@ -1,0 +1,37 @@
+/* Add your styles here */
+h1{
+    display:flex;
+    justify-content : center;
+    align-items:center;
+}
+
+#sentiments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sentiment-line {
+    margin-bottom: 10px;  /* Adjust this value to control the space between paragraphs */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+    max-width: 300px; /* Set a maximum width for the cell content */
+    overflow: hidden; /* Hide overflowing content */
+  }
+
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
